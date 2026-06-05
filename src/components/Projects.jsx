@@ -2,7 +2,6 @@ import React from 'react';
 import ProjectCard from './ProjectCard';
 
 export default function Projects() {
-  // لیست پروژه‌های واقعی شما در گیت‌هاب
   const myProjects = [
     {
       id: 1,
@@ -21,13 +20,12 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" style={{ padding: '2rem 0' }}>
-      <h2 style={{ marginBottom: '1.5rem', textAlign: 'center' }}>My Projects</h2>
-      <div style={{ 
-        display: 'grid', 
-        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-        gap: '1.5rem' 
-      }}>
+    <section id="projects" className="py-12 border-b border-gray-100 dark:border-gray-800">
+      <h2 className="text-3xl font-bold mb-8 text-gray-800 dark:text-white">
+        💻 My Projects
+      </h2>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {myProjects.map((project) => (
           <ProjectCard 
             key={project.id}

@@ -2,50 +2,25 @@ import React from 'react';
 
 export default function ProjectCard({ title, description, tech, link }) {
   return (
-    <div style={{ 
-      backgroundColor: 'var(--card-bg, #ffffff)', 
-      border: '1px solid #e0e0e0', 
-      borderRadius: '12px', 
-      padding: '1.5rem', 
-      boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'between',
-      height: '100%'
-    }}>
-      <h3 style={{ margin: '0 0 0.5rem 0', color: 'var(--text-color, #333)' }}>{title}</h3>
-      <p style={{ fontSize: '0.95rem', opacity: 0.8, lineHeight: '1.5', flexGrow: 1 }}>{description}</p>
+    <div className="p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm transition-all">
+      <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">{title}</h3>
+      <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">{description}</p>
       
-      {/* بخش تکنولوژی‌ها */}
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', margin: '1rem 0' }}>
-        {tech && tech.map((item, index) => (
-          <span key={index} style={{ 
-            fontSize: '0.8rem', 
-            padding: '0.25rem 0.75rem', 
-            backgroundColor: '#e0f2fe', 
-            color: '#0369a1', 
-            borderRadius: '9999px',
-            fontWeight: '500'
-          }}>
-            {item}
+      <div className="flex flex-wrap gap-2 mb-4">
+        {tech.map((t, idx) => (
+          <span key={idx} className="text-xs font-medium px-2.5 py-1 rounded bg-gray-150 dark:bg-gray-700 text-gray-850 dark:text-gray-200">
+            {t}
           </span>
         ))}
       </div>
-
-      {/* لینک مستقیم به گیت‌هاب شما */}
+      
       <a 
         href={link} 
         target="_blank" 
         rel="noopener noreferrer" 
-        style={{ 
-          display: 'inline-block', 
-          color: '#0284c7', 
-          textDecoration: 'none', 
-          fontWeight: 'bold',
-          fontSize: '0.95rem'
-        }}
+        className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold py-2 px-4 rounded-lg transition-colors"
       >
-        View Project ➜
+        View Code 🚀
       </a>
     </div>
   );
