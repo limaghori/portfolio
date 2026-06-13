@@ -4,7 +4,7 @@ This is a modern, responsive, and dynamic portfolio built with React and Vite. I
 
 ## 🌐 Live Deployment
 You can view the live website here: 
-https://comforting-daffodil-38d0a3.netlify.app/
+https://lambent-cascaron-ed9c75.netlify.app
 
 ---
 
